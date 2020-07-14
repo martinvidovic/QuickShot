@@ -24,4 +24,5 @@ Quickshot was an app available on the mac app store, but unfortunatelly it is no
      - UI Option to quit the app
      - UI Option to change sorting (by date created, modified, etc...)
      - UI Option for searching files
+     
    [Screenie]: <https://apps.apple.com/us/app/screenie/id965442961?mt=12>
