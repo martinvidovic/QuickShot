@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var eventMonitor: EventMonitor?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let contentView = ContentView()
+        let contentView = ContentView(viewModel: .init())
         createPopover(view: contentView)
         createStatusBar()
         NSApp.activate(ignoringOtherApps: true)
