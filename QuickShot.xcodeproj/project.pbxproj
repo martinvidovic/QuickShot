@@ -8,23 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		EC72F52024BC7EEA00004872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72F51F24BC7EEA00004872 /* AppDelegate.swift */; };
-		EC72F52224BC7EEA00004872 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72F52124BC7EEA00004872 /* ContentView.swift */; };
 		EC72F52424BC7EF000004872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC72F52324BC7EF000004872 /* Assets.xcassets */; };
 		EC72F52724BC7EF000004872 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC72F52624BC7EF000004872 /* Preview Assets.xcassets */; };
 		EC72F52A24BC7EF000004872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC72F52824BC7EF000004872 /* Main.storyboard */; };
 		EC72F53B24BCF30D00004872 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72F53A24BCF30C00004872 /* EventMonitor.swift */; };
+		EC72F53E24BDB4A400004872 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72F53D24BDB4A400004872 /* ContentViewModel.swift */; };
+		EC72F54424BDB70500004872 /* Array+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72F54324BDB70500004872 /* Array+extension.swift */; };
+		EC72F54B24BDB8F500004872 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72F54A24BDB8F500004872 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC72F51C24BC7EEA00004872 /* QuickShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC72F51F24BC7EEA00004872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC72F52124BC7EEA00004872 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC72F52324BC7EF000004872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC72F52624BC7EF000004872 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC72F52924BC7EF000004872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC72F52B24BC7EF000004872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC72F52C24BC7EF000004872 /* QuickShot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickShot.entitlements; sourceTree = "<group>"; };
 		EC72F53A24BCF30C00004872 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		EC72F53D24BDB4A400004872 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		EC72F54324BDB70500004872 /* Array+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+extension.swift"; sourceTree = "<group>"; };
+		EC72F54A24BDB8F500004872 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,8 @@
 		EC72F51E24BC7EEA00004872 /* QuickShot */ = {
 			isa = PBXGroup;
 			children = (
+				EC72F53F24BDB67100004872 /* Source */,
 				EC72F51F24BC7EEA00004872 /* AppDelegate.swift */,
-				EC72F52124BC7EEA00004872 /* ContentView.swift */,
 				EC72F52324BC7EF000004872 /* Assets.xcassets */,
 				EC72F52824BC7EF000004872 /* Main.storyboard */,
 				EC72F52B24BC7EF000004872 /* Info.plist */,
@@ -75,6 +79,40 @@
 				EC72F52624BC7EF000004872 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC72F53C24BDB48600004872 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				EC72F53D24BDB4A400004872 /* ContentViewModel.swift */,
+				EC72F54A24BDB8F500004872 /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		EC72F53F24BDB67100004872 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EC72F54224BDB6F600004872 /* Utils */,
+				EC72F54024BDB68600004872 /* Components */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EC72F54024BDB68600004872 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EC72F53C24BDB48600004872 /* ContentView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EC72F54224BDB6F600004872 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EC72F54324BDB70500004872 /* Array+extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC72F53E24BDB4A400004872 /* ContentViewModel.swift in Sources */,
+				EC72F54B24BDB8F500004872 /* ContentView.swift in Sources */,
 				EC72F53B24BCF30D00004872 /* EventMonitor.swift in Sources */,
-				EC72F52224BC7EEA00004872 /* ContentView.swift in Sources */,
+				EC72F54424BDB70500004872 /* Array+extension.swift in Sources */,
 				EC72F52024BC7EEA00004872 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
