@@ -36,6 +36,16 @@ final class ContentViewModel: ObservableObject {
         }
         do {
             try fileManager.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+                .sorted(by: { url1, url2 -> Bool in
+                    let value1 = try url1.resourceValues(forKeys: [.creationDateKey, .contentModificationDateKey])
+                    let value2 = try url2.resourceValues(forKeys: [.creationDateKey, .contentModificationDateKey])
+
+                    if let date1 = value1.creationDate, let date2 = value2.creationDate {
+                        return date1.compare(date2) == ComparisonResult.orderedDescending
+                    } else {
+                        return true
+                    }
+                })
                 .forEach { url in
                     images.append(url)
             }
