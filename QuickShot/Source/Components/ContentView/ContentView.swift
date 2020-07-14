@@ -24,6 +24,9 @@ struct ContentView: View {
                                     .frame(width: geometry.size.width/3,
                                            height: geometry.size.height/2)
                                     .border(Color.black, width: 1)
+                                    .onDrag {
+                                        return NSItemProvider(object: image as NSURL)
+                                }
                             }
                         }
                     }
