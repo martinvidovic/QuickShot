@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC39E1C524BDDCF800CD84BC /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC39E1C424BDDCF800CD84BC /* DependencyContainer.swift */; };
+		EC39E1C724BDDD1C00CD84BC /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC39E1C624BDDD1C00CD84BC /* Resolver.swift */; };
+		EC39E1CA24BDDD8300CD84BC /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC39E1C924BDDD8300CD84BC /* UserDefaultsService.swift */; };
+		EC39E1CC24BDDED000CD84BC /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC39E1CB24BDDED000CD84BC /* Inject.swift */; };
+		EC39E1CE24BDE0E800CD84BC /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC39E1CD24BDE0E800CD84BC /* FileManagerService.swift */; };
 		EC72F52024BC7EEA00004872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72F51F24BC7EEA00004872 /* AppDelegate.swift */; };
 		EC72F52424BC7EF000004872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC72F52324BC7EF000004872 /* Assets.xcassets */; };
 		EC72F52724BC7EF000004872 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC72F52624BC7EF000004872 /* Preview Assets.xcassets */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC39E1C424BDDCF800CD84BC /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		EC39E1C624BDDD1C00CD84BC /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		EC39E1C924BDDD8300CD84BC /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		EC39E1CB24BDDED000CD84BC /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		EC39E1CD24BDE0E800CD84BC /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		EC72F51C24BC7EEA00004872 /* QuickShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC72F51F24BC7EEA00004872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC72F52324BC7EF000004872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC39E1C824BDDD6B00CD84BC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC39E1C924BDDD8300CD84BC /* UserDefaultsService.swift */,
+				EC39E1CD24BDE0E800CD84BC /* FileManagerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EC72F51324BC7EEA00004872 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +112,8 @@
 		EC72F53F24BDB67100004872 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				EC39E1C424BDDCF800CD84BC /* DependencyContainer.swift */,
+				EC39E1C824BDDD6B00CD84BC /* Services */,
 				EC72F54224BDB6F600004872 /* Utils */,
 				EC72F54024BDB68600004872 /* Components */,
 			);
@@ -111,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				EC72F54324BDB70500004872 /* Array+extension.swift */,
+				EC39E1C624BDDD1C00CD84BC /* Resolver.swift */,
+				EC39E1CB24BDDED000CD84BC /* Inject.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -188,8 +211,13 @@
 			files = (
 				EC72F53E24BDB4A400004872 /* ContentViewModel.swift in Sources */,
 				EC72F54B24BDB8F500004872 /* ContentView.swift in Sources */,
+				EC39E1CC24BDDED000CD84BC /* Inject.swift in Sources */,
 				EC72F53B24BCF30D00004872 /* EventMonitor.swift in Sources */,
 				EC72F54424BDB70500004872 /* Array+extension.swift in Sources */,
+				EC39E1CE24BDE0E800CD84BC /* FileManagerService.swift in Sources */,
+				EC39E1CA24BDDD8300CD84BC /* UserDefaultsService.swift in Sources */,
+				EC39E1C524BDDCF800CD84BC /* DependencyContainer.swift in Sources */,
+				EC39E1C724BDDD1C00CD84BC /* Resolver.swift in Sources */,
 				EC72F52024BC7EEA00004872 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
