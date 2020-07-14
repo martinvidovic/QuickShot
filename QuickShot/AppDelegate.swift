@@ -19,6 +19,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var eventMonitor: EventMonitor?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        /*
+         it is better to divide dependencies between views
+         and not to access ALL dependencies to ALL views,
+         but for small project like this, it is okey
+         */
+        Resolver.shared.add(type: DependencyContainer.self) { return DependencyContainer() }
+        
         let contentView = ContentView(viewModel: .init())
         createPopover(view: contentView)
         createStatusBar()
