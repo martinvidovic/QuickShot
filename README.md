@@ -16,9 +16,9 @@ Quickshot was an app available on the mac app store, but unfortunatelly it is no
   - Load screenshots in folder,
   - Drag&Drop image wherever user want,
   - Sorting by date created, modified, etc...
+  - Automatically update images, when new ones are added
 
 ### Possible improvements:
-  - Automatically update images, when new ones are added
   - Add non-scrollable Bar on top:
      - UI Option to start at login
      - UI Option to quit the app
