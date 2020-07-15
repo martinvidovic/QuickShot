@@ -13,31 +13,26 @@ struct ContentView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                HStack {
-                    Text(self.viewModel.errorMessage)
-                }
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 0) {
-                        ForEach(self.viewModel.images.chunked(into: 3), id: \.self) { chunk in
-                            HStack(alignment: .top, spacing: 0) {
-                                ForEach(chunk, id: \.self) { image in
-                                    Image(nsImage: NSImage(byReferencing: image))
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: geometry.size.width/3,
-                                               height: geometry.size.height/2)
-                                        .border(Color.black, width: 1)
-                                        .onDrag {
-                                            return NSItemProvider(object: image as NSURL)
-                                    }
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    ForEach(self.viewModel.images.chunked(into: 3), id: \.self) { chunk in
+                        HStack(alignment: .top, spacing: 0) {
+                            ForEach(chunk, id: \.self) { image in
+                                Image(nsImage: NSImage(byReferencing: image))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: geometry.size.width/3,
+                                           height: geometry.size.height/2)
+                                    .border(Color.black, width: 1)
+                                    .onDrag {
+                                        return NSItemProvider(object: image as NSURL)
                                 }
                             }
                         }
                     }
                 }
-            }
-        }.background(Color.gray)
+            }.background(Color.gray)
+        }
     }
 }
 
