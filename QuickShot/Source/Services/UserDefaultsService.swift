@@ -21,7 +21,7 @@ final class UserDefaultsService {
     /// Load data for access to directory outside of Sandbox
     /// - Returns: Optional Data
     func getBookmark() -> Data? {
-        return userDefaults.data(forKey: "URL")
+        return userDefaults.data(forKey: bookmarkKey)
     }
     
     /// Save data for access to directory outside of Sandbox
